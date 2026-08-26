@@ -2,12 +2,12 @@ class Solution {
   public:
     int countDigits(int n) {
         // Code here
-        if(n == 0) return 1;
-        int cnt = 0;
-        while(n >0){
-            cnt++;
-            n /= 10;
+        int count  = 0;
+        while(n > 0){
+            int lastdigit = n % 10;
+            count ++;
+            n = n /10;
         }
-        return cnt;
+        return count;
     }
 };
